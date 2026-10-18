@@ -1,2 +1,3 @@
 # Journal
-Write your Journal questions and notes here.
+Phase 1 - 
+In Phase 1, I created an abstract VehicleReport class. Inside the class, I created a generateReport() method that controls the order of the steps. I added methods to collect data and log the status. I also declared formatReport() as an abstract method so that subclasses can provide their own formatting without changing the overall report process. The Hollywood Principle means “Don't call us, we'll call you.” In my project, the parent class, VehicleReport, controls the order of the steps and calls the methods for me. The child classes can customize their own reports without having to control the whole process. Normally, I would call each method myself and decide when it runs, but with the Template Method pattern, the parent class handles the order, and the child classes just customize the parts that are different.
