@@ -7,3 +7,7 @@ When I invoked generateReport() on my TruckReport and BikeReport instances, I ob
 
 Phase 3- 
 In Phase 3, I learned that a boolean hook is optional, while an abstract method requires the child class to implement it. In Phase 1, formatReport() was abstract, so both child classes had to provide their own implementation. In Phase 3, shouldCheckMaintenance() already had a default behavior, so the child classes could choose whether to override it. I also learned that when the truck's hook returned true, it ran performMaintenanceCheck(). The bike did not run the maintenance check because it did not override the hook and inherited the default false value. This helped me understand how hooks can conditionally change the workflow without changing the overall order of the template method.
+
+
+Phase 4- 
+While testing my program, I had trouble remembering how to write the if statement correctly. I also had trouble understanding why BikeReport should inherit the default behavior instead of overriding the hook. I learned that an if statement checks whether the hook returns true before running the maintenance check. I also learned that BikeReport can inherit the default false value, while TruckReport overrides the hook to return true. Working through these problems helped me understand how hooks allow different subclasses to have different behaviors while the parent class still controls the overall workflow.
