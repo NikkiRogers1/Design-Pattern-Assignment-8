@@ -4,5 +4,5 @@ public class BikeReport extends VehicleReport {
     protected void formatReport(){
         System.out.println("Formatting lightweight parcel dimensions.");
     }
-    
+
 }

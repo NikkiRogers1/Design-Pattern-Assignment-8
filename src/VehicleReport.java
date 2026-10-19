@@ -3,7 +3,14 @@ public abstract class VehicleReport {
     public final void generateReport(){
         collectData();
         formatReport();
+        if (shouldCheckMaintenance()) {
+            performMaintenanceCheck(); 
+        }
+
+        
+
         logStatus();
+
 
     }
 
@@ -19,4 +26,11 @@ public abstract class VehicleReport {
         System.out.println("Log entry created.");
     }
 
+    protected boolean shouldCheckMaintenance() {
+        return false;
+    }
+    
+    protected void performMaintenanceCheck() {
+        System.out.println("Performing Maintenance");
+    }
 }
